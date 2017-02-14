@@ -28,14 +28,16 @@ app.use(express.static(__dirname + '/bower_components'));
 
 // build mongo database connection url //
 
-// var dbHost = process.env.DB_HOST || 'localhost'
-var dbPort = process.env.DB_PORT || 27017;
-var dbName = process.env.DB_NAME || 'node-login';
+var dbUser = process.env.DB_USER = 'jonvh432';
+var dbPass = process.env.DB_PASS = 'Quincy432';
+var dbHost = process.env.DB_HOST = 'ds155028.mlab.com';
+var dbPort = process.env.DB_PORT = 55028;
+var dbName = process.env.DB_NAME = 'jonysdatabase';
 
 // var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 // if ("app.get('env') == 'live'"){
 // prepend url with authentication credentials // 
-	var dbURL = 'mongodb://jonvh432:Quincy432@ds155028.mlab.com:55028/jonysdatabase';
+	dbURL = 'mongodb://jonvh432:Quincy432@ds155028.mlab.com:55028/jonysdatabase';
 // }
 
 app.use(session({

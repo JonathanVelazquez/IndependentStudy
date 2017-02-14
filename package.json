@@ -2,7 +2,7 @@
   "name": "node-login",
   "version": "1.5.0",
   "description": "A template for quickly building login systems on top of Node.js & MongoDb",
-  "author": “Jonathan Velazquez <jvelaz07@uw.edu>”,
+  "author": "Jonathan Velazquez <jvelaz07@uw.edu>",
   "website": {
     "url": "https://nodejs-login.herokuapp.com"
   },

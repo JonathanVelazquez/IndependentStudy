@@ -5,7 +5,9 @@
 var express  = require('express');
 var app      = express();
 var path	 = require("path");
-var port     = process.env.PORT || 5000;
+var http = require('http');
+//var port     = process.env.PORT || 5000;
+
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
@@ -22,6 +24,8 @@ var configDB = require('./config/database.js');
 mongoose.connect(configDB.url); // connect to our database
 
 require('./config/passport')(passport); // pass passport for configuration
+
+app.set('port', process.env.PORT || 5000);
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
@@ -45,5 +49,6 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
-app.listen(port);
-console.log('The magic happens on port ' + port);
+http.createServer(app).listen(app.get('port'), function(){
+	console.log('Express server listening on port ' + app.get('port'));
+});

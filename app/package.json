@@ -17,5 +17,9 @@
     "body-parser": "~1.0.0",
     "cookie-parser": "~1.0.0",
     "express-session": "~1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JonathanVelazquez/IndependentStudy.git"
   }
 }

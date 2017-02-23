@@ -1,0 +1,7 @@
+{
+  "name": "HappyManage",
+  "description": "A Node.js app for authentication using express 4 ",
+  "repository": "https://github.com/JonathanVelazquez/IndependentStudy",
+  "keywords": ["node", "express"]
+}
+

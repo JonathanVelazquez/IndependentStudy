@@ -20,7 +20,7 @@ module.exports = {
     'googleAuth' : {
         'clientID'         : '1054901403778-08lkq8mr5vo01b9vhrnp8l90tismdlka.apps.googleusercontent.com',
         'clientSecret'     : 'QnO4HlgJ6eYCniA2FZEO1bEH',
-        'callbackURL'      : 'http://localhost:8080/auth/google/callback'
+        'callbackURL'      : 'http://server.happdev.com/auth/google/callback'
     }
 
 };

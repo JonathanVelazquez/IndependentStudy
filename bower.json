@@ -17,6 +17,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular-ui-calendar": "~1.0.2"
+    "angular-ui-calendar": "~1.0.2",
+    "my-personal-kanban": "https://github.com/greggigon/my-personal-kanban.git#^0.8.0"
+  },
+  "resolutions": {
+    "angular": "~1.4.x",
+    "jquery": "~2.1.4"
   }
 }

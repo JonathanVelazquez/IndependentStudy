@@ -18,7 +18,8 @@
   ],
   "dependencies": {
     "angular-ui-calendar": "~1.0.2",
-    "my-personal-kanban": "https://github.com/greggigon/my-personal-kanban.git#^0.8.0"
+    "my-personal-kanban": "https://github.com/greggigon/my-personal-kanban.git#^0.8.0",
+    "angular-google-gapi": "^1.0.1"
   },
   "resolutions": {
     "angular": "~1.4.x",

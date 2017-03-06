@@ -18,8 +18,9 @@ module.exports = {
     },
 
     'googleAuth' : {
-        'clientID'         : '1054901403778-08lkq8mr5vo01b9vhrnp8l90tismdlka.apps.googleusercontent.com',
-        'clientSecret'     : 'QnO4HlgJ6eYCniA2FZEO1bEH',
+        'clientID'         : '1043840731926-1fg0hpq267detntrh0c9kkce8rl8i4p1.apps.googleusercontent.com',
+        'clientSecret'     : 'NJji75b9Ib7WPdKFhH3OsQMF',
+        'apiKey'           : 'AIzaSyD_EkXfOs3aYiHQ1p8bVtk2pJPfwjm1-lQ',
         'callbackURL'      : 'http://localhost:8080/auth/google/callback' // 'http://server.happdev.com/auth/google/callback'
     },
 };

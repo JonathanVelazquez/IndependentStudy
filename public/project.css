@@ -1,0 +1,122 @@
+.menu-bar .menu-elements .static{
+    display: inline-block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-color: black;
+    background-color: gainsboro;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color:black;
+}
+
+.menu-bar, menu-elements {
+    display:inline-block;    
+}
+
+.menu-bar .menu-elements .dynamic{
+    display: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-color: black;
+    background-color: gainsboro;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color:black;
+}
+
+.menu-elements:hover .dynamic{
+    display: block;    
+    
+}
+
+.menu-bar {
+    padding: 40px;  
+    position:fixed;
+    z-index:10; 
+}
+
+.kan-cal-bar h3 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+.container-fluid{
+    display: block;
+    margin: auto;
+    height: : 50%;
+   
+}
+
+body {
+    
+    
+}
+
+/* --------------------------------------- Maryam's Code ----------------------------------------- */
+
+@charset "UTF-8";
+/* CSS Document */
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+
+}
+.col-sm-4 h1 {
+	padding-left: 50px;
+    color: #FBF5F6;
+    line-height: 20px;ß
+    font-size: 30px;
+    font-weight: 100;
+	border-bottom: 3px solid #FBF5F6;
+    list-style: none;
+    margin: 10px 0px;
+    padding-bottom: 15px;
+}
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    height: 470px
+}
+
+.col-sm-4.content {
+    height: 470px
+}
+    
+    /* Set gray background color and 100% height */
+.sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 25;
+}
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+
+.sidenav {
+    height: auto;
+    padding: 15px;
+}
+
+.row.content {
+    height:auto;	 
+}

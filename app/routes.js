@@ -1,97 +1,5 @@
 
 
-
-
-
-
-/*
-
-
- // app/routes.js
-module.exports = function(app, passport) {
-
-    // =====================================
-    // HOME PAGE (with login links) ========
-    // =====================================
-    app.get('/', function(req, res) {
-        res.render('index.ejs'); // load the index.ejs file
-    });
-
-    // =====================================
-    // LOGIN ===============================
-    // =====================================
-    // show the login form
-    app.get('/login', function(req, res) {
-
-        // render the page and pass in any flash data if it exists
-        res.render('login.ejs', { message: req.flash('loginMessage') });
-    });
-
-    // process the login form
-    app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/login', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
-    }));
-
-    // =====================================
-    // SIGNUP ==============================
-    // =====================================
-    // show the signup form
-    app.get('/signup', function(req, res) {
-
-        // render the page and pass in any flash data if it exists
-        res.render('signup.ejs', { message: req.flash('signupMessage') });
-    });
-
-    // process the signup form
-    app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/signup', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
-    }));
-
-    // =====================================
-    // PROFILE SECTION =========================
-    // =====================================
-    // we will want this protected so you have to be logged in to visit
-    // we will use route middleware to verify this (the isLoggedIn function)
-// route middleware to ensure user is logged in
-function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated())
-        return next();
-
-    res.redirect('/');
-}
-
- app.get('/profile',isLoggedIn, function(req,res){
-  res.sendFile(path.join('/Users/Jonathan/Desktop/test/test'+'/index.html'));
-    user : req.user
-
-});
-
-    // =====================================
-    // LOGOUT ==============================
-    // =====================================
-    app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
-    });
-};
-
-
-
-// route middleware to make sure
-function isLoggedIn(req, res, next) {
-
-    // if user is authenticated in the session, carry on
-    if (req.isAuthenticated())
-        return next();
-
-    // if they aren't redirect them to the home page
-    res.redirect('/');
-}
-*/
 module.exports = function(app, passport) {
 
 // normal routes ===============================================================
@@ -114,8 +22,14 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
-    app.get('/calendar', function(req, res) {
+    app.get('/calendar',isLoggedIn, function(req, res) {
         res.render('calendar.ejs');
+    });
+    app.get('/project',isLoggedIn, function(reg, res) {
+        res.render('project.ejs');
+    });
+    app.get('/kanban', function(reg, res) {
+        res.render('kanban.ejs');
     });
 
 // =============================================================================
@@ -131,7 +45,7 @@ module.exports = function(app, passport) {
 
         // process the login form
         app.post('/login', passport.authenticate('local-login', {
-            successRedirect : '/profile', // redirect to the secure profile section
+            successRedirect : '/project', // redirect to the secure profile section
             failureRedirect : '/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }));
@@ -144,7 +58,7 @@ module.exports = function(app, passport) {
 
         // process the signup form
         app.post('/signup', passport.authenticate('local-signup', {
-            successRedirect : '/profile', // redirect to the secure profile section
+            successRedirect : '/project', // redirect to the secure profile section
             failureRedirect : '/signup', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }));
@@ -160,7 +74,7 @@ module.exports = function(app, passport) {
         // the callback after google has authenticated the user
         app.get('/auth/google/callback',
             passport.authenticate('google', {
-                successRedirect : '/profile',
+                successRedirect : '/project',
                 failureRedirect : '/'
             }));
 
@@ -173,7 +87,7 @@ module.exports = function(app, passport) {
             res.render('connect-local.ejs', { message: req.flash('loginMessage') });
         });
         app.post('/connect/local', passport.authenticate('local-signup', {
-            successRedirect : '/profile', // redirect to the secure profile section
+            successRedirect : '/project', // redirect to the secure profile section
             failureRedirect : '/connect/local', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }));

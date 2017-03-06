@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+
+<html lang ="en">
+<head> 
+	<title>Team Management App</title>
+	<meta name ="viewport" content ="width=device-width, initial-scale= 1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel ="stylesheet">
+	<link href="project.css" type="text/css" rel ="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">1</a></li><!--Number of Project-->
+                    <li><a href="#">Projects</a></li> 
+                </ul>
+            </div>
+        </div>
+
+        <!-- KANBAN & CALENDAR TOP NAV -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" >
+                    <ul class="nav navbar-nav">
+                        <!--Number of Project-->
+                        <form id="asd">form </form>
+                         <button onclick="asd(1)">Kanban</button>
+                         <button onclick="asd(2)">Calander</button>
+                        <script type="text/javascript">
+                            function asd(a)
+                                    {
+                                        if(a==1)
+                                            document.getElementById("kanban-parent").style.display="block";
+                                        else
+                                        document.getElementById("kanban-parent").style.display="none";
+                                    }
+                        </script>
+                       
+                        
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+         <!-- MENU COLLAPSIBLE -->
+        <div class="menu-bar">
+           
+            <nav class="menu-elements">
+               <a class ="static circular-menu">Menu</a>
+               <a href="account.html" class="dynamic circular-menu">Account</a>
+               <a href="messaging.html" class="dynamic circular-menu">Messaging</a>
+               <a href="files.html" class="dynamic circular-menu">Files</a>
+               <a href="notification.html" class="dynamic circular-menu">Notification</a>
+            </nav>
+        </div>
+
+        <div class="container-fluid" id="kanban-parent"> 
+             
+               <div class="row content">  
+                   <div class ="col-sm-18">
+                   <% include kanban %>
+                   </div>
+                </div>
+        
+        </div>
+
+
+        <footer id="footer-bck" class="container-fluid text-left">
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>        
+                </div>
+            </form>
+        </footer>
+    </nav>
+    
+</body>
+
+
+
+</html>

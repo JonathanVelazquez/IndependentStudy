@@ -23,13 +23,13 @@ module.exports = function(app, passport) {
     });
 
     app.get('/calendar',isLoggedIn, function(req, res) {
-        res.render('calendar.ejs');
+        res.render('calendar.ejs', require('../config/auth'));
     });
     app.get('/project',isLoggedIn, function(reg, res) {
-        res.render('project.ejs');
+        res.render('project.ejs', require('../config/auth'));
     });
     app.get('/kanban', function(reg, res) {
-        res.render('kanban.ejs');
+        res.render('kanban.ejs', require('../config/auth'));
     });
 
 // =============================================================================
@@ -69,7 +69,7 @@ module.exports = function(app, passport) {
     // google ---------------------------------
 
         // send to google to do the authentication
-        app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
+        app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email', 'https://www.googleapis.com/auth/calendar'] }));
 
         // the callback after google has authenticated the user
         app.get('/auth/google/callback',

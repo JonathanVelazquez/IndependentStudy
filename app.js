@@ -3,6 +3,7 @@
 // set up ======================================================================
 // get all the tools we need
 var express  = require('express');
+var path  = require('path');
 var app      = express();
 var port     = process.env.PORT || 8080;
 var mongoose = require('mongoose');
@@ -30,6 +31,8 @@ app.use( express.static("public" ) );
 
 
 app.set('view engine', 'ejs'); // set up ejs for templating
+app.set('views', path.join(__dirname, '/app/views'));
+
 
 // required for passport
 app.use(session({

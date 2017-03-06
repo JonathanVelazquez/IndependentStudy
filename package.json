@@ -1,28 +1,28 @@
 {
   "name": "node-authentication",
   "description": " node-authentication",
-  "author": " An individual <jvelaz07@uw.edu>",
+  "author": "JonathanVelazquez",
   "main": "server.js",
   "scripts": {
     "start": "node app.js"
   },
-  "dependencies" : {
-    "express": "~4.14.0",
-    "ejs": "~2.5.2",
-    "mongoose": "~4.8.4",
-    "passport": "~0.3.2",
-    "passport-local" : "~1.0.0",
-    "passport-facebook": "~2.1.1",
-    "passport-twitter": "~1.0.4",
-    "passport-google-oauth" : "~1.0.0",
-    "connect-flash": "~0.1.1",
-    "bcrypt-nodejs" : "latest",
-
-    "morgan": "~1.7.0",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "bcrypt-nodejs": "latest",
     "body-parser": "~1.15.2",
+    "connect-flash": "~0.1.1",
     "cookie-parser": "~1.4.3",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "express-session": "~1.14.1",
     "method-override": "~2.3.6",
-    "express-session": "~1.14.1"
+    "mongoose": "~4.8.4",
+    "morgan": "~1.7.0",
+    "passport": "~0.3.2",
+    "passport-facebook": "~2.1.1",
+    "passport-google-oauth": "~1.0.0",
+    "passport-local": "~1.0.0",
+    "passport-twitter": "~1.0.4"
   },
   "engines": {
     "node": "6.10.0"
@@ -31,7 +31,5 @@
     "type": "git",
     "url": "https://github.com/JonathanVelazquez/IndependentStudy.git"
   },
-  "author": "JonathanVelazquez",
   "license": "MIT"
-
 }

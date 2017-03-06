@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>H[app]Dev</title>
+    <style>
+        body         { padding-top:80px; }
+    </style>
+    <link rel="stylesheet" href="fullcalendar/dist/fullcalendar.css"/>
+
+    <!-- jquery, moment, and angular have to get included before fullcalendar -->
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="angular/angular.min.js"></script>
+    <script type="text/javascript" src="angular-ui-calendar/src/calendar.js"></script>
+    <script type="text/javascript" src="fullcalendar/dist/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="fullcalendar/dist/gcal.js"></script>
+    <script type="text/javascript" src="calendar.js"></script>
+</head>
+<body ng-app="calendarApp">
+<div class="container" ng-controller="calCtrl">
+    <div ui-calendar ng-model="eventSources"></div>
+</div>
+</body>
+</html>

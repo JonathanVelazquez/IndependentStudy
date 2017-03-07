@@ -9,7 +9,7 @@
     text-align: center;
     vertical-align: middle;
     border: 1px solid rgba(0,0,0,0.2);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 200;
     font-size: 20px;
@@ -31,7 +31,7 @@
     text-align: center;
     vertical-align: middle;
     border: 1px solid rgba(0,0,0,0.2);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 200;
     font-size: 20px;
@@ -44,7 +44,9 @@
 }
 
 .menu-bar {
-    padding: 40px;  
+    padding-bottom: 40px; 
+    padding-left: 40px; 
+    padding-right: 40px; 
     position:fixed;
     z-index:10; 
 }

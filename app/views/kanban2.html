@@ -16,7 +16,7 @@
  
         <link rel="stylesheet" href="styles/main.2e1732e0.css">
         
-        <link rel="stylesheet" href="styles/themes/default-dark.css" id="themeStylesheet">
+        <link rel="stylesheet" href="styles/themes/default-bright.css" id="themeStylesheet">
 </head>
 <body ng-app="mpk">
   <!--[if lt IE 7]>
@@ -36,9 +36,7 @@
           <form ng-submit="rename()" >
             <div class="input-group">
               <span class="input-group-addon">
-              <FORM>
-                <a ng-click="editingName=false" onClick="history.go(0)" VALUE="Refresh"><i class="glyphicon glyphicon-tasks"></i></a>
-                </FORM>
+                <a ng-click="editingName=false"><i class="glyphicon glyphicon-tasks"></i></a>
               </span>
               <input type="text" name="kanbanName" ng-model="newName" class="form-control" />
             </div>
@@ -47,23 +45,18 @@
       </div>
       <div class="col-md-9">
         <ul class="nav navbar-nav pull-right" id="menu">
- 
-                    <li><a class="mpkNew" title="New Kanban board" ng-click="kanbanMenu.openNewKanban()"><i class="glyphicon glyphicon-briefcase"></i> New</a>
-                    </li>
-                    <li><a title="Downloadelete Kanban from local storage" ng-click="kanbanMenu.delete()"><i class="glyphicon glyphicon-remove-sign"></i> Delete</a></li>
-                    <li><a title="Select Theme for the Kanban board" ng-click="kanbanMenu.openSwitchTheme()"><i class="glyphicon glyphicon-picture"></i> Themes</a></li>
-           
-<!--
-                    <li><a title="Open archive" ng-click="kanbanMenu.openArchive(kanban)"><i class="glyphicon glyphicon-folder-open"></i> Archives</a></li>
-                    <li role="presentation" class="divider"></li>
-                    
-
-                    <li><a title="Export Kanban to file" ng-click="kanbanMenu.openExport(allKanbans, kanban.name)" href=""><i class="glyphicon glyphicon-save"></i> Export</a></li>
-                    <li><a title="Import Kanban from file" ng-click="kanbanMenu.openImport()" href=""><i class="glyphicon glyphicon-open"></i> Import</a></li>
-                    <li role="presentation" class="divider"></li>
-                    <li><a title="Help" ng-click="showHelp=true" href=""><i class="glyphicon glyphicon-question-sign"></i> Help</a></li>
-     
-        </ul>-->
+         <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Dropdown Example
+<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+        </ul>
 
         <div id="info" class="nav pull-right" ng-show="showInfo">
           <span id="error" class="error" ng-show="showError"><a ng-click="showInfo=false;showError=false;errorMessage=''">{{errorMessage}}</a></span>
@@ -141,7 +134,7 @@
             <button type="button" class="btn btn-danger pull-left" ng-hide="model.showWarning" ng-click="delete()">Delete column</button>
             <button type="button" class="btn btn-danger pull-left" ng-show="model.showWarning" ng-click="delete()" ng-disabled="model.deleteDisabled">Click again to delete this column <i class="glyphicon glyphicon-exclamation-sign"></i></button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" >Update</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </div>
       </form>
     </mpk-modal>
@@ -252,17 +245,17 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" ng-click="createNew()" value="Reload Page" onClick="window.location.reload()">Create new</button>
+          <button type="submit" class="btn btn-primary" ng-click="createNew()">Create new</button>
         </div>
     </form>
   </mpk-modal> 
 </div>  
 
-<!-- THIS IS THE HELP >
+<!-- THIS IS THE HELP -->
 <mpk-modal title="Help" visible="showHelp" modal-style="width:90%">
     <p><span class="version">My Personal Kanban Version: 0.8.0</span> from <a href="http://greggigon.github.io/my-personal-kanban/" target="blank">http://greggigon.github.io/my-personal-kanban/</a></p>
     <p>
-      <strong>Kanban</strong><br />
+      <strong>Personal Kanban</strong><br />
       <small>You can create <strong>new Kanban</strong> by selecting <strong>Kanban -> New</strong> from the Kanban menu. You can give it a name and select number of columns. You can also choose existing Kanban as a template for the new one.<br/>
       Once Kanban is created you can <strong>rename</strong> it by <strong>clicking it's title</strong> in the top bar. You can add new cards to the columns by pressing <strong>&plus;</strong> in the top right of the column. <br />
         You can give each <strong>column name</strong> and change it's colour by selecting <strong>Column settings icon</strong> next to it's name. <strong>(Number)</strong> next to column name indicates number of cards in the column.<br /><br />
@@ -291,7 +284,7 @@
         You can also use your own Local Cloud. There is server implementation provided at: <a href="https://github.com/greggigon/my-personal-kanban-server" target="blank">https://github.com/greggigon/my-personal-kanban-server</a>. Just select the option and provide URL for the Local Cloud service <strong>Cloud -> Setup -> Use own Local Cloud</strong>.
       </small>
     </p>
-</mpk-modal>-->
+</mpk-modal>
 
 <div ng-controller="SwitchThemeController">
   <mpk-modal title="Choose Kanban Theme" visible="showSwitchTheme">
